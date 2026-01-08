@@ -123,7 +123,7 @@ nav.scrolled {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 8rem 1.5rem 4rem;
+  padding: 6rem 1.25rem 3rem;
   /* Top padding clears fixed nav */
   position: relative;
   overflow: hidden;
@@ -257,7 +257,7 @@ nav.scrolled {
 
 /* Sections */
 .section {
-  padding: 4rem 1.5rem;
+  padding: 3rem 1.25rem;
   width: 100%;
   margin: 0 auto;
 }
