@@ -106,6 +106,54 @@ function MainContent() {
         </div>
       </section>
 
+      <section id="what-is-fpv" className="section" style={{ background: 'var(--bg-gradient)' }}>
+        <div className="section-header">
+          <h2 className="section-title">What is FPV?</h2>
+          <p style={{ color: 'var(--text-secondary)', maxWidth: '700px' }}>
+            <strong>First Person View (FPV)</strong> puts the pilot inside the drone.
+            Unlike standard drones that float and observe, FPV drones are manually piloted to <strong>fly and interact</strong>.
+            This allows for dynamic shots, high speeds, and complex maneuvers that mimic the movement of a bird or a roller coaster, providing an immersive experience that traditional cameras physically cannot achieve.
+          </p>
+        </div>
+
+        <div className="fpv-explainer-grid">
+          <div className="fpv-card">
+            <div className="fpv-icon">🚀</div>
+            <h3>Unmatched Speed</h3>
+            <p>Hitting 140km+ to chase cars, bikes, and boats where others can't keep up.</p>
+          </div>
+          <div className="fpv-card">
+            <div className="fpv-icon">🦅</div>
+            <h3>True Flight</h3>
+            <p>Diving buildings and mountain surfing with continuous, flowing movement.</p>
+          </div>
+          <div className="fpv-card">
+            <div className="fpv-icon">🎯</div>
+            <h3>Proximity</h3>
+            <p>Flying inches from talent and through tight gaps for intimate, thrilling shots.</p>
+          </div>
+          <div className="fpv-card">
+            <div className="fpv-icon">🎥</div>
+            <h3>Cinema Ready</h3>
+            <p>Carrying Red Komodo / GoPro 5K cameras for steady, high-grade visuals.</p>
+          </div>
+        </div>
+
+        <div className="fpv-indicators">
+          {[0, 1, 2, 3].map((idx) => (
+            <div
+              key={idx}
+              className={`fpv-dot ${idx === activeFpvIndex ? 'active' : ''}`}
+              onClick={() => setActiveFpvIndex(idx)}
+            >
+              {idx === activeFpvIndex && (
+                <div className="fpv-timer-bar"></div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Showreel / Highlights Section */}
       <section id="showreel" className="section" style={{ paddingBottom: '0' }}>
         <div className="section-header">
@@ -178,54 +226,6 @@ function MainContent() {
             <h4>Red Komodo</h4>
             <p>Heavy Lifter Rig</p>
           </div>
-        </div>
-      </section>
-
-      <section id="what-is-fpv" className="section" style={{ background: 'var(--bg-gradient)' }}>
-        <div className="section-header">
-          <h2 className="section-title">What is FPV?</h2>
-          <p style={{ color: 'var(--text-secondary)', maxWidth: '700px' }}>
-            <strong>First Person View (FPV)</strong> puts the pilot inside the drone.
-            Unlike standard drones that float and observe, FPV drones are manually piloted to <strong>fly and interact</strong>.
-            This allows for dynamic shots, high speeds, and complex maneuvers that mimic the movement of a bird or a roller coaster, providing an immersive experience that traditional cameras physically cannot achieve.
-          </p>
-        </div>
-
-        <div className="fpv-explainer-grid">
-          <div className="fpv-card">
-            <div className="fpv-icon">🚀</div>
-            <h3>Unmatched Speed</h3>
-            <p>Hitting 140km+ to chase cars, bikes, and boats where others can't keep up.</p>
-          </div>
-          <div className="fpv-card">
-            <div className="fpv-icon">🦅</div>
-            <h3>True Flight</h3>
-            <p>Diving buildings and mountain surfing with continuous, flowing movement.</p>
-          </div>
-          <div className="fpv-card">
-            <div className="fpv-icon">🎯</div>
-            <h3>Proximity</h3>
-            <p>Flying inches from talent and through tight gaps for intimate, thrilling shots.</p>
-          </div>
-          <div className="fpv-card">
-            <div className="fpv-icon">🎥</div>
-            <h3>Cinema Ready</h3>
-            <p>Carrying Red Komodo / GoPro 5K cameras for steady, high-grade visuals.</p>
-          </div>
-        </div>
-
-        <div className="fpv-indicators">
-          {[0, 1, 2, 3].map((idx) => (
-            <div
-              key={idx}
-              className={`fpv-dot ${idx === activeFpvIndex ? 'active' : ''}`}
-              onClick={() => setActiveFpvIndex(idx)}
-            >
-              {idx === activeFpvIndex && (
-                <div className="fpv-timer-bar"></div>
-              )}
-            </div>
-          ))}
         </div>
       </section>
     </>
