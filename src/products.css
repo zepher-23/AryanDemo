@@ -14,12 +14,22 @@
 }
 
 /* Compact Grid Layout */
+/* Compact Grid Layout - Mobile Redesign (2 Columns) */
 .store-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /* Smaller cards */
-    gap: 1.5rem;
-    margin-bottom: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    /* Force 2 columns for compactness */
+    gap: 0.8rem;
+    /* Tighter gap */
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+    .store-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+    }
 }
 
 /* Product Card - Aesthetic Overhaul */

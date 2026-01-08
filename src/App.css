@@ -432,8 +432,9 @@ nav.scrolled {
 /* Floating Mobile Theme Toggle (visible on mobile only) */
 .theme-toggle-mobile {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 100px;
+  /* Raised to avoid conflict with bottom elements */
+  right: 20px;
   width: 48px;
   height: 48px;
   border-radius: 50%;
