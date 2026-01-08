@@ -322,29 +322,137 @@ function MainContent() {
 
 
 
-      <section id="delivery" className="section" style={{ background: 'var(--bg-gradient)' }}>
+      <section id="delivery" className="section" style={{ background: 'var(--bg-gradient)', position: 'relative' }}>
+        {/* Background Decor */}
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(90deg, transparent, var(--card-border), transparent)' }}></div>
+
         <div className="section-header">
-          <h2 className="section-title">Delivery Format</h2>
-          <p style={{ color: 'var(--text-secondary)' }}>Workflow & Timeline</p>
+          <h2 className="section-title">Mission Deliverables</h2>
+          <p style={{ color: 'var(--text-secondary)' }}>Data Handoff Protocols</p>
         </div>
-        <div className="gear-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
-          <div className="gear-item" style={{ alignItems: 'flex-start', padding: '2rem' }}>
-            <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--primary-color)' }}>📄 Raw Footage</h4>
-            <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong>Format:</strong> 4K/5K/6K (ProRes / RAW / mp4)</p>
-            <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong>Delivery:</strong> On-site SSD transfer or Cloud Drive</p>
-            <p style={{ fontSize: '0.9rem' }}>Best for production houses with their own editing teams.</p>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '2rem',
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 1rem'
+        }}>
+          {/* Card 1: Raw Data */}
+          <div style={{
+            background: 'var(--card-bg)',
+            border: '1px solid var(--card-border)',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            position: 'relative'
+          }}>
+            <div style={{
+              padding: '2rem',
+              borderBottom: '1px solid var(--card-border)',
+              background: 'linear-gradient(to bottom, rgba(255,255,255,0.02), transparent)'
+            }}>
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📄</div>
+              <h3 style={{ fontSize: '1.4rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>Raw Data</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Uncompressed. Full Dynamic Range.</p>
+            </div>
+            <div style={{ padding: '2rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ fontFamily: 'monospace', color: 'var(--text-muted)' }}>FORMAT</span>
+                <span style={{ color: 'var(--text-main)', fontWeight: '600' }}>ProRes / RAW / MP4</span>
+              </div>
+              <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ fontFamily: 'monospace', color: 'var(--text-muted)' }}>RES</span>
+                <span style={{ color: 'var(--text-main)', fontWeight: '600' }}>4K / 5.3K / 6K</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ fontFamily: 'monospace', color: 'var(--text-muted)' }}>TRANSFER</span>
+                <span style={{ color: 'var(--text-main)', fontWeight: '600' }}>SSD / Cloud Drop</span>
+              </div>
+
+              <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px dashed var(--card-border)' }}>
+                Best for production houses with internal post-production teams.
+              </div>
+            </div>
           </div>
-          <div className="gear-item" style={{ alignItems: 'flex-start', padding: '2rem' }}>
-            <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--primary-color)' }}>🎬 Edited Reel</h4>
-            <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong>Included:</strong> Color Grading, Sound Design, Music Sync</p>
-            <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong>Timeline:</strong> 24-48 Hours</p>
-            <p style={{ fontSize: '0.9rem' }}>Ready-to-post content optimized for Instagram/YouTube.</p>
+
+          {/* Card 2: Edited Feed */}
+          <div style={{
+            background: 'var(--card-bg)',
+            border: '1px solid var(--card-border)',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            position: 'relative',
+            transform: 'translateY(-10px)',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.2)'
+          }}>
+            <div style={{
+              position: 'absolute', top: 0, left: 0, width: '100%', height: '4px', background: 'var(--primary-color)'
+            }}></div>
+            <div style={{
+              padding: '2rem',
+              borderBottom: '1px solid var(--card-border)',
+              background: 'linear-gradient(to bottom, rgba(255,255,255,0.02), transparent)'
+            }}>
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🎬</div>
+              <h3 style={{ fontSize: '1.4rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>Social Edit</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Synced. Graded. Ready to Post.</p>
+            </div>
+            <div style={{ padding: '2rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ fontFamily: 'monospace', color: 'var(--text-muted)' }}>STYLE</span>
+                <span style={{ color: 'var(--text-main)', fontWeight: '600' }}>High Energy / Flow</span>
+              </div>
+              <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ fontFamily: 'monospace', color: 'var(--text-muted)' }}>AUDIO</span>
+                <span style={{ color: 'var(--text-main)', fontWeight: '600' }}>SFX + Music Sync</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ fontFamily: 'monospace', color: 'var(--text-muted)' }}>TAT</span>
+                <span style={{ color: 'var(--primary-color)', fontWeight: '600' }}>24 - 48 Hours</span>
+              </div>
+
+              <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px dashed var(--card-border)' }}>
+                Optimized for Instagram Reels, TikTok, and YouTube Shorts.
+              </div>
+            </div>
           </div>
-          <div className="gear-item" style={{ alignItems: 'flex-start', padding: '2rem' }}>
-            <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--primary-color)' }}>📡 Live Feed</h4>
-            <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong>Tech:</strong> HDMI / SDI Output from Goggles</p>
-            <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong>Use Case:</strong> Live Broadcast, Director Monitoring</p>
-            <p style={{ fontSize: '0.9rem' }}>Real-time 1080p feed for directors to monitor the shot.</p>
+
+          {/* Card 3: Live Feed */}
+          <div style={{
+            background: 'var(--card-bg)',
+            border: '1px solid var(--card-border)',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            position: 'relative'
+          }}>
+            <div style={{
+              padding: '2rem',
+              borderBottom: '1px solid var(--card-border)',
+              background: 'linear-gradient(to bottom, rgba(255,255,255,0.02), transparent)'
+            }}>
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📡</div>
+              <h3 style={{ fontSize: '1.4rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>Live Uplink</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Real-time low latency monitoring.</p>
+            </div>
+            <div style={{ padding: '2rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+              <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ fontFamily: 'monospace', color: 'var(--text-muted)' }}>OUTPUT</span>
+                <span style={{ color: 'var(--text-main)', fontWeight: '600' }}>HDMI / SDI</span>
+              </div>
+              <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ fontFamily: 'monospace', color: 'var(--text-muted)' }}>QUALITY</span>
+                <span style={{ color: 'var(--text-main)', fontWeight: '600' }}>1080p / 60fps</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ fontFamily: 'monospace', color: 'var(--text-muted)' }}>LATENCY</span>
+                <span style={{ color: 'var(--text-main)', fontWeight: '600' }}>&lt; 28ms Glass-to-Glass</span>
+              </div>
+
+              <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px dashed var(--card-border)' }}>
+                For directors, live events, and broadcast integration.
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -443,7 +551,7 @@ function App() {
         </Routes>
 
         <footer id="contact" style={{
-          marginTop: '4rem',
+          marginTop: 0,
           paddingBottom: '2rem',
           background: 'var(--bg-color)',
           borderTop: '1px solid var(--card-border)'
