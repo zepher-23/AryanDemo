@@ -1,0 +1,160 @@
+:root {
+  font-family: 'Outfit', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+
+  /* Core Brand Colors */
+  --primary-color: #00ffff;
+  /* Cyan/Neon Blue */
+  --secondary-color: #ffe600;
+  /* Caution Yellow/Gold */
+  --accent-color: #ff0055;
+  /* Hot Pink */
+
+  /* Dark Mode Defaults */
+  --bg-color: #050505;
+  --bg-gradient: radial-gradient(circle at 50% 10%, #1a1a1a 0%, #050505 100%);
+  --text-main: rgba(255, 255, 255, 0.92);
+  --text-secondary: #999;
+  --text-muted: #666;
+
+  --nav-bg: rgba(5, 5, 5, 0.95);
+  --nav-border: rgba(255, 255, 255, 0.1);
+  --mobile-nav-bg: rgba(5, 5, 5, 0.98);
+
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+
+  --footer-bg: #0a0a0a;
+  --footer-border: #1a1a1a;
+
+  --gear-item-bg: #0f0f0f;
+  --gear-item-border: #222;
+
+  --text-gradient-main: linear-gradient(to right, #fff, #999);
+  --text-shadow-primary: 0 0 10px rgba(0, 255, 255, 0.4);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Light Mode Overrides */
+  --primary-color: #5dd6d8;
+  /* Lighter Cyan requested by user */
+  --bg-color: #eff2f5;
+  /* Soft grey-blue tint, less harsh than white */
+  --bg-gradient: radial-gradient(circle at 50% 0%, #ffffff 0%, #dfe4ea 100%);
+  /* Subtle depth */
+  --text-main: #1a1a1a;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  /* Frosted glass */
+  --nav-border: rgba(0, 0, 0, 0.08);
+  --mobile-nav-bg: rgba(255, 255, 255, 0.95);
+
+  --card-bg: #ffffff;
+  /* Pure white cards to pop against off-white bg */
+  --card-border: rgba(0, 0, 0, 0.06);
+  --glass-bg: rgba(0, 0, 0, 0.04);
+  /* Tint for inputs/glass elements */
+  --glass-border: rgba(0, 0, 0, 0.08);
+
+  --footer-bg: #e2e8f0;
+  --footer-border: #cbd5e0;
+
+  --gear-item-bg: #ffffff;
+  --gear-item-border: #e2e8f0;
+
+  --text-gradient-main: linear-gradient(to right, #2d3748, #4a5568);
+  --text-shadow-primary: 1px 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--bg-gradient);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  transition: background 0.3s, color 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  /* More geometric/modern for headings */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+button {
+  border-radius: 4px;
+  /* Sharper corners for tech feel */
+  border: 1px solid transparent;
+  padding: 0.8em 1.6em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 4px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}

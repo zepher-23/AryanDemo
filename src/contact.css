@@ -1,0 +1,287 @@
+/* Contact Page Styles - Mobile First */
+
+.contact-page {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 1rem 2rem;
+    /* Top padding for fixed nav */
+    position: relative;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Default to single column for mobile */
+    gap: 0;
+    /* No gap initially, stacked */
+    max-width: 1200px;
+    width: 100%;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Connect Info (Top/Left) */
+.contact-info {
+    padding: 2.5rem 1.5rem;
+    background: var(--card-bg);
+    /* Use card-bg instead of hardcoded gradient for better theme switching */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: var(--text-gradient-main);
+    /* Keeps text gradient, maybe adjust for light mode later via variable? */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+    color: var(--text-main);
+    /* Fallback */
+}
+
+/* Fallback for light theme text visibility if gradient fails */
+[data-theme="light"] .contact-info h2 {
+    background: linear-gradient(to right, #000, #444);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #000;
+}
+
+.contact-info p {
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.method-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.method-icon {
+    width: 45px;
+    height: 45px;
+    background: var(--glass-bg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    border: 1px solid var(--card-border);
+    flex-shrink: 0;
+    text-shadow: var(--text-shadow-primary);
+}
+
+.method-text h4 {
+    color: var(--text-main);
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+}
+
+.method-text span {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    word-break: break-all;
+    /* Prevent email overflow on small screens */
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: rgba(37, 211, 102, 0.1);
+    border: 1px solid #25D366;
+    color: #25D366;
+    padding: 0.6rem 1.2rem;
+    width: fit-content;
+    /* Don't stretch full width */
+    border-radius: 50px;
+    /* Pill shape for smaller look */
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 0 10px rgba(37, 211, 102, 0.1);
+}
+
+.whatsapp-btn:hover {
+    background-color: #25D366;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    align-items: center;
+}
+
+.social-link {
+    color: var(--text-main);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    font-size: 1.8rem;
+    /* Icon size */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background: var(--glass-bg);
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
+
+.social-link:hover {
+    opacity: 1;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    background: rgba(0, 255, 255, 0.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    text-shadow: var(--text-shadow-primary);
+}
+
+/* Form (Bottom/Right) */
+.contact-form-wrapper {
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-left: 0.25rem;
+}
+
+.form-input,
+.form-textarea {
+    background: var(--glass-bg);
+    border: 1px solid var(--card-border);
+    padding: 0.9rem;
+    border-radius: 8px;
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.form-input option {
+    background-color: var(--nav-bg);
+    color: var(--text-main);
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: var(--card-bg);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: black;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background: #fff;
+    color: black;
+    box-shadow: 0 0 20px var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Desktop Styles (min-width: 900px) */
+@media (min-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .contact-info {
+        padding: 4rem;
+        border-bottom: none;
+        /* Remove separator */
+        border-right: 1px solid var(--card-border);
+        /* Add vertical separator */
+    }
+
+    .contact-form-wrapper {
+        padding: 4rem;
+    }
+
+    .contact-info h2 {
+        font-size: 3rem;
+    }
+
+    .method-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .social-link {
+        font-size: 1.6rem;
+        padding: 0.8rem;
+    }
+}
