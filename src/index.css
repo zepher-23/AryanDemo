@@ -105,7 +105,8 @@ body {
   background: var(--bg-gradient);
   background-color: var(--bg-color);
   color: var(--text-main);
-  transition: background 0.3s, color 0.3s;
+  /* Optimized Transition: Avoid animating gradients (jittery) */
+  transition: color 0.2s ease-out, background-color 0.2s ease-out;
 }
 
 h1,
