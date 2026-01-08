@@ -936,3 +936,10 @@ nav.scrolled {
     /* Larger cards on desktop */
   }
 }
+/* Mobile Footer Order Reversal */
+@media (max-width: 900px) {
+  .footer-column-faq {
+    order: -1;
+    margin-bottom: 3rem;
+  }
+}

@@ -154,6 +154,97 @@ function MainContent() {
         </div>
       </section>
 
+      <section id="safety" className="section">
+        <div className="section-header">
+          <h2 className="section-title">Safety Protocols</h2>
+          <p style={{ color: 'var(--text-secondary)' }}>Mission Readiness Status</p>
+        </div>
+
+        {/* HUD Container */}
+        <div style={{
+          position: 'relative',
+          border: '1px solid var(--glass-border)',
+          background: 'var(--glass-bg)',
+          padding: '2rem',
+          maxWidth: '1000px',
+          margin: '0 auto',
+          borderRadius: '4px'
+        }}>
+          {/* Tech Corners */}
+          <div style={{ position: 'absolute', top: -1, left: -1, width: 20, height: 20, borderTop: '2px solid var(--primary-color)', borderLeft: '2px solid var(--primary-color)' }}></div>
+          <div style={{ position: 'absolute', top: -1, right: -1, width: 20, height: 20, borderTop: '2px solid var(--primary-color)', borderRight: '2px solid var(--primary-color)' }}></div>
+          <div style={{ position: 'absolute', bottom: -1, left: -1, width: 20, height: 20, borderBottom: '2px solid var(--primary-color)', borderLeft: '2px solid var(--primary-color)' }}></div>
+          <div style={{ position: 'absolute', bottom: -1, right: -1, width: 20, height: 20, borderBottom: '2px solid var(--primary-color)', borderRight: '2px solid var(--primary-color)' }}></div>
+
+          {/* Status Bar */}
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            borderBottom: '1px solid var(--card-border)',
+            paddingBottom: '1rem',
+            marginBottom: '2rem',
+            fontFamily: 'monospace',
+            color: 'var(--primary-color)',
+            fontSize: '0.8rem',
+            letterSpacing: '1px'
+          }}>
+            <span>// SYS.STATUS: NOMINAL</span>
+            <span>ID: ARYAN_FPV_01</span>
+          </div>
+
+          {/* Grid Content */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '3rem 2rem'
+          }}>
+            {/* Item 1 */}
+            <div>
+              <h4 style={{ color: 'var(--text-main)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontFamily: 'monospace', fontSize: '1rem' }}>
+                <span style={{ color: 'var(--primary-color)' }}>[01]</span> DGCA COMPLIANCE
+              </h4>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: '1.6', paddingLeft: '1rem', borderLeft: '1px solid var(--card-border)' }}>
+                Fully certified under <strong>Digital Sky</strong> regulations.
+                Strict adherence to zone protocols (Red/Yellow/Green).
+              </p>
+            </div>
+
+            {/* Item 2 */}
+            <div>
+              <h4 style={{ color: 'var(--text-main)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontFamily: 'monospace', fontSize: '1rem' }}>
+                <span style={{ color: 'var(--primary-color)' }}>[02]</span> INSURANCE
+              </h4>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: '1.6', paddingLeft: '1rem', borderLeft: '1px solid var(--card-border)' }}>
+                Commercial <strong>Third-Party Liability</strong> active.
+                Risk assessment docs available on request.
+              </p>
+            </div>
+
+            {/* Item 3 */}
+            <div>
+              <h4 style={{ color: 'var(--text-main)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontFamily: 'monospace', fontSize: '1rem' }}>
+                <span style={{ color: 'var(--primary-color)' }}>[03]</span> STANDARD OPS
+              </h4>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: '1.6', paddingLeft: '1rem', borderLeft: '1px solid var(--card-border)' }}>
+                Mandatory <strong>Spotters</strong> for all complex lines.
+                Pre-flight checklists & crowd safety protocols.
+              </p>
+            </div>
+
+            {/* Item 4 */}
+            <div>
+              <h4 style={{ color: 'var(--text-main)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontFamily: 'monospace', fontSize: '1rem' }}>
+                <span style={{ color: 'var(--primary-color)' }}>[04]</span> PILOT STATS
+              </h4>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: '1.6', paddingLeft: '1rem', borderLeft: '1px solid var(--card-border)' }}>
+                <strong>5+ Years</strong> / 1,000+ Flight Hours.
+                Zero incident history in high-proximity scenarios.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Showreel / Highlights Section */}
       <section id="showreel" className="section" style={{ paddingBottom: '0' }}>
         <div className="section-header">
@@ -229,30 +320,38 @@ function MainContent() {
         </div>
       </section>
 
-      <section id="faq" className="section">
+
+
+      <section id="delivery" className="section" style={{ background: 'var(--bg-gradient)' }}>
         <div className="section-header">
-          <h2 className="section-title">Pilot Intel</h2>
-          <p style={{ color: 'var(--text-secondary)' }}>Frequently Asked Questions</p>
+          <h2 className="section-title">Delivery Format</h2>
+          <p style={{ color: 'var(--text-secondary)' }}>Workflow & Timeline</p>
         </div>
-        <div className="faq-container">
-          <details className="faq-item">
-            <summary>Do you travel for shoots?</summary>
-            <p>Yes, absolutely. I am available for domestic and international travel. My gear is packed in travel-safe cases ready for deployment worldwide.</p>
-          </details>
-          <details className="faq-item">
-            <summary>What equipment do you use?</summary>
-            <p>I fly a custom fleet ranging from 2.5" Cinewhoops for indoor safety to 7" Long Range rigs for mountains, and X8 Heavy Lifters for Red Komodo/Cinema cameras.</p>
-          </details>
-          <details className="faq-item">
-            <summary>Is FPV safe for indoor events?</summary>
-            <p>Safety is the top priority. I use "Cinewhoop" drones with fully enclosed ducting for indoor flights, ensuring no risk to people or property, along with liability insurance.</p>
-          </details>
-          <details className="faq-item">
-            <summary>What is the turnaround time?</summary>
-            <p>For raw footage, immediate transfer is available on location. For edited reels, typically 24-48 hours depending on complexity.</p>
-          </details>
+        <div className="gear-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+          <div className="gear-item" style={{ alignItems: 'flex-start', padding: '2rem' }}>
+            <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--primary-color)' }}>📄 Raw Footage</h4>
+            <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong>Format:</strong> 4K/5K/6K (ProRes / RAW / mp4)</p>
+            <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong>Delivery:</strong> On-site SSD transfer or Cloud Drive</p>
+            <p style={{ fontSize: '0.9rem' }}>Best for production houses with their own editing teams.</p>
+          </div>
+          <div className="gear-item" style={{ alignItems: 'flex-start', padding: '2rem' }}>
+            <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--primary-color)' }}>🎬 Edited Reel</h4>
+            <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong>Included:</strong> Color Grading, Sound Design, Music Sync</p>
+            <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong>Timeline:</strong> 24-48 Hours</p>
+            <p style={{ fontSize: '0.9rem' }}>Ready-to-post content optimized for Instagram/YouTube.</p>
+          </div>
+          <div className="gear-item" style={{ alignItems: 'flex-start', padding: '2rem' }}>
+            <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: 'var(--primary-color)' }}>📡 Live Feed</h4>
+            <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong>Tech:</strong> HDMI / SDI Output from Goggles</p>
+            <p style={{ fontSize: '0.9rem', marginBottom: '0.5rem' }}><strong>Use Case:</strong> Live Broadcast, Director Monitoring</p>
+            <p style={{ fontSize: '0.9rem' }}>Real-time 1080p feed for directors to monitor the shot.</p>
+          </div>
         </div>
       </section>
+
+
+
+
     </>
   );
 }
@@ -261,6 +360,7 @@ function App() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -342,12 +442,101 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
 
-        <footer id="contact" className="footer">
-          <h2>Ready to Fly?</h2>
-          <p style={{ marginBottom: '2rem', color: 'var(--text-secondary)' }}>For custom builds, shoots, or inquiries</p>
-          <a href="https://wa.me/916361897075?text=Hi%20Aryan%2C%20I%27m%20interested%20in%20booking%20a%20shoot%20%2F%20custom%20service." target="_blank" rel="noopener noreferrer" className="contact-btn" style={{ textDecoration: 'none', display: 'inline-block' }}>Book a Shoot</a>
-          <div style={{ marginTop: '2rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-            © 2024 Aryan FPV. All rights reserved.
+        <footer id="contact" style={{
+          marginTop: '4rem',
+          paddingBottom: '2rem',
+          background: 'var(--bg-color)',
+          borderTop: '1px solid var(--card-border)'
+        }}>
+          <div className="footer-content" style={{
+            maxWidth: '1200px',
+            margin: '0 auto',
+            padding: '5rem 1.5rem',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+            gap: '5rem',
+            alignItems: 'start'
+          }}>
+            {/* Left Column: CTA */}
+            <div className="footer-column-cta">
+              <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: '1.1', marginBottom: '1.5rem', fontWeight: '800', color: 'var(--text-main)' }}>
+                Ready to <br />
+                <span style={{ color: 'var(--primary-color)' }}>Fly?</span>
+              </h2>
+
+              <p style={{ color: 'var(--text-secondary)', marginBottom: '3rem', maxWidth: '400px', lineHeight: '1.6', fontSize: '1.1rem' }}>
+                From cinematic mountain surfing to high-precision indoor lines. Let's capture the impossible together.
+              </p>
+
+              <a href="https://wa.me/916361897075?text=Hi%20Aryan%2C%20I%27m%20interested%20in%20booking%20a%20shoot." target="_blank" rel="noopener noreferrer" style={{
+                textDecoration: 'none',
+                display: 'inline-block',
+                padding: '1rem 3rem',
+                background: 'var(--text-main)',
+                color: 'var(--bg-color)',
+                fontWeight: '600',
+                borderRadius: '50px',
+                fontSize: '1rem',
+                transition: 'transform 0.2s',
+              }}
+                onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
+                onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+              >
+                Book a Shoot
+              </a>
+
+              <div style={{ marginTop: '5rem', color: 'var(--text-muted)', fontSize: '0.85rem' }}>
+                © 2024 Aryan FPV. All rights reserved.
+              </div>
+            </div>
+
+            {/* Right Column: FAQ */}
+            <div className="footer-column-faq">
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '2rem' }}>
+                <div style={{ width: '4px', height: '20px', background: 'var(--primary-color)', borderRadius: '2px', boxShadow: '0 0 10px var(--primary-color)' }}></div>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--text-main)', letterSpacing: '1px', textTransform: 'uppercase', margin: 0 }}>Pilot Intel</h3>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                {[
+                  { q: "Do you travel for shoots?", a: "Yes. Available specifically for domestic & international deployments. Gear is travel-hardened." },
+                  { q: "What gear do you fly?", a: "Custom fleet: 2.5\" to X8 Heavy Lifters. Red Komodo / BMPCC / GoPro capable." },
+                  { q: "Is it safe indoors?", a: "100%. Ducted Cinewhoops ensure zero risk to talent or property. Fully insured." },
+                  { q: "Turnaround time?", a: "Raw data: Immediate on-site. Edited reels: 24-48h mission window." }
+                ].map((item, index) => (
+                  <div key={index} style={{ borderBottom: '1px solid var(--card-border)' }}>
+                    <div
+                      onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                      style={{
+                        padding: '1.5rem 0',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        color: 'var(--text-main)'
+                      }}
+                    >
+                      <span style={{ fontSize: '1rem', fontWeight: '500' }}>{item.q}</span>
+                      <span style={{
+                        fontSize: '1.2rem',
+                        transform: openFaqIndex === index ? 'rotate(45deg)' : 'rotate(0deg)',
+                        transition: 'transform 0.3s ease',
+                        color: 'var(--text-secondary)'
+                      }}>+</span>
+                    </div>
+                    <div style={{
+                      height: openFaqIndex === index ? 'auto' : '0',
+                      overflow: 'hidden',
+                      transition: 'all 0.3s ease'
+                    }}>
+                      <p style={{ paddingBottom: '1.5rem', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', margin: 0 }}>
+                        {item.a}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </footer>
       </div>
