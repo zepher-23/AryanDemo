@@ -51,14 +51,14 @@ const Contact = () => {
                             <div className="method-icon">✉</div>
                             <div className="method-text">
                                 <h4>Email</h4>
-                                <span>aryan@fpv-cinema.com</span>
+                                <span>aryan@example.com</span>
                             </div>
                         </div>
                         <div className="method-item">
                             <div className="method-icon">📍</div>
                             <div className="method-text">
                                 <h4>Location</h4>
-                                <span>Mumbai, India</span>
+                                <span>Mangalore, Karnataka</span>
                             </div>
                         </div>
                         <div className="method-item">

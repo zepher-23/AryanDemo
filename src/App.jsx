@@ -85,7 +85,7 @@ function MainContent() {
             <h5 style={{ color: 'var(--primary-color)', textShadow: 'var(--text-shadow-primary)', letterSpacing: '2px', marginBottom: '0.5rem' }}>THE PILOT</h5>
             <h2>Behind The Goggles</h2>
             <p>
-              I'm Aryan, a professional FPV drone pilot and cinematographer based in India.
+              I'm Aryan, a professional FPV drone pilot and cinematographer based in Mangalore, Karnataka.
               With over 5 years of flight experience, I specialize in capturing dynamic, high-speed, and cinematic footage that standard drones simply can't achieve.
             </p>
             <p>
@@ -226,6 +226,31 @@ function MainContent() {
             <h4>Red Komodo</h4>
             <p>Heavy Lifter Rig</p>
           </div>
+        </div>
+      </section>
+
+      <section id="faq" className="section">
+        <div className="section-header">
+          <h2 className="section-title">Pilot Intel</h2>
+          <p style={{ color: 'var(--text-secondary)' }}>Frequently Asked Questions</p>
+        </div>
+        <div className="faq-container">
+          <details className="faq-item">
+            <summary>Do you travel for shoots?</summary>
+            <p>Yes, absolutely. I am available for domestic and international travel. My gear is packed in travel-safe cases ready for deployment worldwide.</p>
+          </details>
+          <details className="faq-item">
+            <summary>What equipment do you use?</summary>
+            <p>I fly a custom fleet ranging from 2.5" Cinewhoops for indoor safety to 7" Long Range rigs for mountains, and X8 Heavy Lifters for Red Komodo/Cinema cameras.</p>
+          </details>
+          <details className="faq-item">
+            <summary>Is FPV safe for indoor events?</summary>
+            <p>Safety is the top priority. I use "Cinewhoop" drones with fully enclosed ducting for indoor flights, ensuring no risk to people or property, along with liability insurance.</p>
+          </details>
+          <details className="faq-item">
+            <summary>What is the turnaround time?</summary>
+            <p>For raw footage, immediate transfer is available on location. For edited reels, typically 24-48 hours depending on complexity.</p>
+          </details>
         </div>
       </section>
     </>

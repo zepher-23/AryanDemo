@@ -124,7 +124,7 @@ nav.scrolled {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 6rem 1.25rem 3rem;
+  padding: 7rem 1.5rem 4rem;
   /* Top padding clears fixed nav */
   position: relative;
   overflow: hidden;
@@ -258,7 +258,7 @@ nav.scrolled {
 
 /* Sections */
 .section {
-  padding: 3rem 1.25rem;
+  padding: 4rem 1.5rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -512,6 +512,10 @@ nav.scrolled {
 
   .hero {
     padding: 0 10%;
+  }
+
+  .section {
+    padding: 6rem 10%;
   }
 
   .hero h1 {
@@ -797,6 +801,76 @@ nav.scrolled {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* FAQ Section */
+#faq .section-header {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item[open] {
+  border-color: var(--primary-color);
+  background: var(--glass-bg);
+}
+
+.faq-item summary {
+  padding: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-main);
+  transition: color 0.3s;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 300;
+  transition: transform 0.3s;
+}
+
+.faq-item[open] summary::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item p {
+  padding: 0 1.2rem 1.2rem 1.2rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  animation: fadeIn 0.4s ease;
 }
 
 .highlight-card img {
