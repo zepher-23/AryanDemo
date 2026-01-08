@@ -106,6 +106,57 @@ function MainContent() {
         </div>
       </section>
 
+      {/* Showreel / Highlights Section */}
+      <section id="showreel" className="section" style={{ paddingBottom: '0' }}>
+        <div className="section-header">
+          <h2 className="section-title">Showreel</h2>
+          <p style={{ color: 'var(--text-muted)' }}>Selected cinematic moments</p>
+        </div>
+        <div className="highlight-scroll">
+          {[
+            {
+              title: "High Speed Chase",
+              category: "Action",
+              image: "/portfolio_car_chase.png",
+              specs: { camera: "GoPro 11", drone: "5\" Racer", range: "0.5km", res: "5K 60fps", elev: "2m" }
+            },
+            {
+              title: "Nature Dive",
+              category: "Cinematic",
+              image: "/gallery_fpv_waterfall.png",
+              specs: { camera: "Red Komodo", drone: "Sicco 8\"", range: "1.2km", res: "6K RAW", elev: "150m" }
+            },
+            {
+              title: "Urban Flow",
+              category: "Freestyle",
+              image: "/gallery_fpv_urban.png",
+              specs: { camera: "DJI O3", drone: "Apex 5\"", range: "800m", res: "4K 60fps", elev: "80m" }
+            },
+            {
+              title: "Neon Nights",
+              category: "City",
+              image: "/hero_bg_final.png",
+              specs: { camera: "Sony FX6", drone: "Thicc X8", range: "200m", res: "4K 120fps", elev: "40m" }
+            }
+          ].map((item, index) => (
+            <div key={index} className="highlight-card">
+              <img src={item.image} alt={item.title} />
+              <div className="highlight-overlay">
+                <h3>{item.title}</h3>
+                <span className="highlight-category" style={{ color: 'var(--primary-color)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold' }}>{item.category}</span>
+                <div className="highlight-specs" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.3rem', width: '100%', marginTop: '0.8rem', fontSize: '0.7rem', color: '#ccc' }}>
+                  <div title="Camera">📷 {item.specs.camera}</div>
+                  <div title="Drone">🚁 {item.specs.drone}</div>
+                  <div title="Range">📡 {item.specs.range}</div>
+                  <div title="Resolution">📼 {item.specs.res}</div>
+                  <div title="Elevation">⛰️ {item.specs.elev}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="gear" className="section">
         <div className="section-header">
           <h2 className="section-title">Flight Grid</h2>
