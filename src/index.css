@@ -79,7 +79,7 @@
   --gear-item-border: #e2e8f0;
 
   --text-gradient-main: linear-gradient(to right, #2d3748, #4a5568);
-  --text-shadow-primary: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  --text-shadow-primary: 1px 1px 0px var(--primary-color);
 }
 
 * {

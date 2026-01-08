@@ -10,7 +10,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--nav-bg);
+  background: var(--bg-color);
+  /* Solid background on hero */
   border-bottom: 1px solid transparent;
   /* Prepare for border transition */
   backdrop-filter: blur(10px);
