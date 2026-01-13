@@ -1,6 +1,15 @@
 import { useState, useEffect } from 'react';
 import './gallery.css';
 
+import galleryFpvUrban from './assets/images/gallery_fpv_urban.png?w=800&format=webp';
+import galleryFpvWaterfall from './assets/images/gallery_fpv_waterfall.png?w=800&format=webp';
+import galleryDjiBeach from './assets/images/gallery_dji_beach.png?w=800&format=webp';
+import portfolioCarChase from './assets/images/portfolio_car_chase.png?w=800&format=webp';
+import portfolioLandscape from './assets/images/portfolio_landscape.png?w=800&format=webp';
+import portfolioRacing from './assets/images/portfolio_racing.png?w=800&format=webp';
+import heroBgFinal from './assets/images/hero_bg_final.png?w=800&format=webp';
+import djiCollection from './assets/images/dji_collection.png?w=800&format=webp';
+
 const Gallery = () => {
     const [filter, setFilter] = useState('All');
 
@@ -9,14 +18,14 @@ const Gallery = () => {
     }, []);
 
     const portfolio = [
-        { id: 1, title: 'Urban Dive', category: 'FPV', image: '/gallery_fpv_urban.png', specs: { camera: "GoPro 11", drone: "5\" Freestyle", range: "600m", res: "5K", elev: "100m" } },
-        { id: 2, title: 'Waterfall Shred', category: 'FPV', image: '/gallery_fpv_waterfall.png', specs: { camera: "GoPro 10", drone: "Cinewhoop", range: "800m", res: "4K", elev: "50m" } },
-        { id: 3, title: 'Island Paradise', category: 'DJI', image: '/gallery_dji_beach.png', specs: { camera: "Mavic 3", drone: "Mavic 3", range: "2km", res: "5.1K", elev: "120m" } },
-        { id: 4, title: 'Car Chase', category: 'FPV', image: '/portfolio_car_chase.png', specs: { camera: "Komodo", drone: "Sicco 8\"", range: "300m", res: "6K", elev: "2m" } },
-        { id: 5, title: 'Mountain Range', category: 'DJI', image: '/portfolio_landscape.png', specs: { camera: "Mavic 3", drone: "Mavic 3", range: "3km", res: "5.1K", elev: "500m" } },
-        { id: 6, title: 'Abandoned Drift', category: 'FPV', image: '/portfolio_racing.png', specs: { camera: "GoPro 11", drone: "5\" Racer", range: "150m", res: "4K", elev: "0m" } },
-        { id: 7, title: 'Neon Night', category: 'FPV', image: '/hero_bg_final.png', specs: { camera: "Sony A7SIII", drone: "Thicc X8", range: "200m", res: "4K", elev: "30m" } },
-        { id: 8, title: 'Studio Showcase', category: 'DJI', image: '/dji_collection.png', specs: { camera: "Avata", drone: "Avata", range: "100m", res: "4K", elev: "5m" } },
+        { id: 1, title: 'Urban Dive', category: 'FPV', image: galleryFpvUrban, specs: { camera: "GoPro 11", drone: "5\" Freestyle", range: "600m", res: "5K", elev: "100m" } },
+        { id: 2, title: 'Waterfall Shred', category: 'FPV', image: galleryFpvWaterfall, specs: { camera: "GoPro 10", drone: "Cinewhoop", range: "800m", res: "4K", elev: "50m" } },
+        { id: 3, title: 'Island Paradise', category: 'DJI', image: galleryDjiBeach, specs: { camera: "Mavic 3", drone: "Mavic 3", range: "2km", res: "5.1K", elev: "120m" } },
+        { id: 4, title: 'Car Chase', category: 'FPV', image: portfolioCarChase, specs: { camera: "Komodo", drone: "Sicco 8\"", range: "300m", res: "6K", elev: "2m" } },
+        { id: 5, title: 'Mountain Range', category: 'DJI', image: portfolioLandscape, specs: { camera: "Mavic 3", drone: "Mavic 3", range: "3km", res: "5.1K", elev: "500m" } },
+        { id: 6, title: 'Abandoned Drift', category: 'FPV', image: portfolioRacing, specs: { camera: "GoPro 11", drone: "5\" Racer", range: "150m", res: "4K", elev: "0m" } },
+        { id: 7, title: 'Neon Night', category: 'FPV', image: heroBgFinal, specs: { camera: "Sony A7SIII", drone: "Thicc X8", range: "200m", res: "4K", elev: "30m" } },
+        { id: 8, title: 'Studio Showcase', category: 'DJI', image: djiCollection, specs: { camera: "Avata", drone: "Avata", range: "100m", res: "4K", elev: "5m" } },
     ];
 
     const filteredItems = filter === 'All'

@@ -9,6 +9,13 @@ import Store from './Store';
 import Gallery from './Gallery';
 import Contact from './Contact';
 
+import heroBg from './assets/images/hero_bg.png?w=1920&format=webp';
+import aboutProfile from './assets/images/about_profile.png?w=800&format=webp';
+import portfolioCarChase from './assets/images/portfolio_car_chase.png?w=800&format=webp';
+import galleryFpvWaterfall from './assets/images/gallery_fpv_waterfall.png?w=800&format=webp';
+import galleryFpvUrban from './assets/images/gallery_fpv_urban.png?w=800&format=webp';
+import heroBgFinal from './assets/images/hero_bg_final.png?w=800&format=webp';
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -44,7 +51,7 @@ function MainContent() {
     <>
       <section className="hero">
         <div className="hero-overlay"></div>
-        <img src="/hero_bg.png" alt="Drone Background" className="hero-bg" />
+        <img src={heroBg} alt="Drone Background" className="hero-bg" />
 
         <div className="hero-content">
           <h1>Capture<br />The Impossible</h1>
@@ -79,7 +86,7 @@ function MainContent() {
       <section id="about" className="section" style={{ background: 'var(--bg-gradient)' }}>
         <div className="about-container">
           <div className="about-image">
-            <img src="/about_profile.png" alt="Aryan FPV Profile" />
+            <img src={aboutProfile} alt="Aryan FPV Profile" />
           </div>
           <div className="about-content">
             <h5 style={{ color: 'var(--primary-color)', textShadow: 'var(--text-shadow-primary)', letterSpacing: '2px', marginBottom: '0.5rem' }}>THE PILOT</h5>
@@ -256,25 +263,25 @@ function MainContent() {
             {
               title: "High Speed Chase",
               category: "Action",
-              image: "/portfolio_car_chase.png",
+              image: portfolioCarChase,
               specs: { camera: "GoPro 11", drone: "5\" Racer", range: "0.5km", res: "5K 60fps", elev: "2m" }
             },
             {
               title: "Nature Dive",
               category: "Cinematic",
-              image: "/gallery_fpv_waterfall.png",
+              image: galleryFpvWaterfall,
               specs: { camera: "Red Komodo", drone: "Sicco 8\"", range: "1.2km", res: "6K RAW", elev: "150m" }
             },
             {
               title: "Urban Flow",
               category: "Freestyle",
-              image: "/gallery_fpv_urban.png",
+              image: galleryFpvUrban,
               specs: { camera: "DJI O3", drone: "Apex 5\"", range: "800m", res: "4K 60fps", elev: "80m" }
             },
             {
               title: "Neon Nights",
               category: "City",
-              image: "/hero_bg_final.png",
+              image: heroBgFinal,
               specs: { camera: "Sony FX6", drone: "Thicc X8", range: "200m", res: "4K 120fps", elev: "40m" }
             }
           ].map((item, index) => (

@@ -1,6 +1,11 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+import djiCollection from './assets/images/dji_collection.png?w=600&format=webp';
+import productFreestyle from './assets/images/product_freestyle.png?w=600&format=webp';
+import productLongrange from './assets/images/product_longrange.png?w=600&format=webp';
+import serviceRepair from './assets/images/service_repair.png?w=600&format=webp';
+
 const Store = () => {
     const { pathname } = useLocation();
 
@@ -15,28 +20,28 @@ const Store = () => {
             id: 101,
             name: "DJI Avata 2 Pro-View Combo",
             price: "₹1,25,990",
-            image: "/dji_collection.png", // Using generic for now
+            image: djiCollection, // Using generic for now
             specs: ["4K/60fps HDR", "155° FOV", "Goggles 3", "RC Motion 3"]
         },
         {
             id: 102,
             name: "DJI Mini 4 Pro Fly More",
             price: "₹1,05,499",
-            image: "/dji_collection.png",
+            image: djiCollection,
             specs: ["<249g", "4K/60fps HDR", "True Vertical Shooting", "Omnidirectional Obstacle Sensing"]
         },
         {
             id: 103,
             name: "DJI Mavic 3 Classic",
             price: "₹1,49,990",
-            image: "/dji_collection.png",
+            image: djiCollection,
             specs: ["4/3 CMOS Hasselblad", "5.1K Video", "46 Min Flight Time", "Omnidirectional Obstacle Sensing"]
         },
         {
             id: 104,
             name: "DJI Air 3 Fly More Combo",
             price: "₹1,35,999",
-            image: "/dji_collection.png",
+            image: djiCollection,
             specs: ["Dual-Camera System", "46 Min Max Flight Time", "Omnidirectional Obstacle Sensing", "O4 HD Video Transmission"]
         }
     ];
@@ -46,28 +51,28 @@ const Store = () => {
             id: 201,
             name: "Aryan 'Shredder' 5\"",
             price: "₹38,990",
-            image: "/product_freestyle.png",
+            image: productFreestyle,
             specs: ["Carbon Fiber Frame", "F7 Flight Controller", "2207 1950KV Motors", "DJI O3 Air Unit"]
         },
         {
             id: 202,
             name: "Aryan 'Explorer' 7\"",
             price: "₹52,490",
-            image: "/product_longrange.png",
+            image: productLongrange,
             specs: ["Deadcat Geometry", "GPS Rescue Ready", "2806.5 1300KV Motors", "ELRS 915MHz"]
         },
         {
             id: 203,
             name: "Aryan 'Whoop' 3.5\"",
             price: "₹24,990",
-            image: "/product_freestyle.png",
+            image: productFreestyle,
             specs: ["Duct Fan Design", "Indoor Safe", "4K Recording", "Caddx Vista"]
         },
         {
             id: 204,
             name: "Aryan 'Cinewhoop' 2.5\"",
             price: "₹19,999",
-            image: "/product_freestyle.png", // Using freestyle as placeholder
+            image: productFreestyle, // Using freestyle as placeholder
             specs: ["Lightweight", "Naked GoPro Ready", "Smooth Flight", "Prop Guards"]
         }
     ];
@@ -77,28 +82,28 @@ const Store = () => {
             id: 301,
             name: "Basic Drone Repair",
             price: "₹1,499",
-            image: "/service_repair.png",
+            image: serviceRepair,
             specs: ["Diagnosis", "Part Replacement", "Calibration", "Test Flight"]
         },
         {
             id: 302,
             name: "Pro Tune Service",
             price: "₹2,999",
-            image: "/service_repair.png",
+            image: serviceRepair,
             specs: ["PID Tuning", "Filter Tuning", "Rate Setup", "Blackbox Analysis"]
         },
         {
             id: 303,
             name: "Waterproofing",
             price: "₹1,999",
-            image: "/service_repair.png",
+            image: serviceRepair,
             specs: ["Conformal Coating", "Non-Conductive Seal", "IP54 Rating Equivalent", "Corrosion Protection"]
         },
         {
             id: 304,
             name: "Custom Build Assembly",
             price: "₹4,999",
-            image: "/service_repair.png",
+            image: serviceRepair,
             specs: ["Part Sourcing", "Professional Assembly", "Firmware Setup", "Maiden Flight"]
         }
     ];
